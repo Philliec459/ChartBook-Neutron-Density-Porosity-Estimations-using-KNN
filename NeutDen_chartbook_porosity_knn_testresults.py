@@ -253,7 +253,7 @@ plt.plot(x, y)
 plt.xlim(0.5, 0)
 
 
-#plt.gca().invert_yaxis()
+plt.gca().invert_yaxis()
 
 plt.title("Porosity Estimation, Normalized KNN")
 plt.ylabel('Depth (feet)')
