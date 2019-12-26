@@ -7,7 +7,7 @@ The objective of this project is to calculate a Neutron-Density Cross-Plot log a
 
 The name of the Python code is NeutDen_chartbook_porosity_knn_testresults.py. This Python program uses a matrix of Neutron Porosity (V/V) vs. Bulk Density (G/CC) with known porosities as the training set. At this point we are using test data as our log data. We first normalize the Neutron Porosity and Bulk Density curves and then use a KNN of 3 to estimate Cross-Plot Porosity from our test data set.   
 
-![SMatrixCNL_Image](Matrix_CNL.png)
+![SMatrixCNL_Image](Matrix_CNL2.png)
 
 ![SMatrixTNPH_Image](Matrix_TNPH.png)
 
