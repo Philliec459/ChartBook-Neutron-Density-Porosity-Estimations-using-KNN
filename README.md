@@ -1,5 +1,5 @@
 # Chart-Book_Neutron-Density_Porosity-using-KNN
-The objective of this project is to calculate a Neutron-Density log analysis based total porosity from Schlumberger CNL or TNPH with fresh and saline Fluid Densities.
+The objective of this project is to calculate a Neutron-Density log analysis based total porosity from Schlumberger CNL or TNPH with fresh and saline Fluid Densities. Collaboration is welcome.
 
 ![CNL_Image](CNL.png)
 
