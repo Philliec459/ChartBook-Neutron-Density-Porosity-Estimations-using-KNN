@@ -11,45 +11,6 @@ import numpy as np
 
 
 
-
-"""
-# =============================================================================
-# # ===========================================================================
-# # #           
-# # #            Read in log data
-# # #                   
-# # ===========================================================================
-# =============================================================================
-"""
-book = xlrd.open_workbook("CNL_1pt1_testdata.xls")  #  log data
-#book = xlrd.open_workbook("GulfCoast_NeutDen.xls")  #  log data
-sh = book.sheet_by_index(0)
-print(sh.name, sh.nrows, sh.ncols)
-
-import win32com.client
-
-o = win32com.client.Dispatch("Excel.Application")
-# o.Visible = 1
-# o.Workbooks.Add() 
-
-rows_data = sh.nrows
-
-Dep = []
-RHOB = []
-CNL = []
-
-
-print(rows_data)
-
-for i in range(0, rows_data, 1):
-    Dep.append(sh.cell_value(rowx=i, colx=0))
-    CNL.append(sh.cell_value(rowx=i, colx=1))    
-    RHOB.append(sh.cell_value(rowx=i, colx=2))
-
-
-
-
-
     
 """
 # =============================================================================
@@ -86,8 +47,6 @@ Rho_Matrix_chart  = []
 Porosity_chart = []
 
 
-
-
 for i in range(0, sh.nrows, 1):
     CNL_chart.append(sh.cell_value(rowx=i, colx=0))
     RHOB_chart.append(sh.cell_value(rowx=i, colx=1))
@@ -95,6 +54,41 @@ for i in range(0, sh.nrows, 1):
     Porosity_chart.append(sh.cell_value(rowx=i, colx=3))
 
  
+"""
+# =============================================================================
+# # ===========================================================================
+# # #           
+# # #            Read in log data
+# # #                   
+# # ===========================================================================
+# =============================================================================
+"""
+book = xlrd.open_workbook("CNL_1pt1_testdata.xls")  #  log data
+#book = xlrd.open_workbook("GulfCoast_NeutDen.xls")  #  log data
+sh = book.sheet_by_index(0)
+print(sh.name, sh.nrows, sh.ncols)
+
+import win32com.client
+
+o = win32com.client.Dispatch("Excel.Application")
+# o.Visible = 1
+# o.Workbooks.Add() 
+
+rows_data = sh.nrows
+
+Dep = []
+RHOB = []
+CNL = []
+
+
+print(rows_data)
+
+for i in range(0, rows_data, 1):
+    Dep.append(sh.cell_value(rowx=i, colx=0))
+    CNL.append(sh.cell_value(rowx=i, colx=1))    
+    RHOB.append(sh.cell_value(rowx=i, colx=2))
+
+
 
 
 """
