@@ -34,6 +34,8 @@ sh = book.sheet_by_index(0)
 print(sh.name, sh.nrows, sh.ncols)
 print()
 
+rows_chart_data = sh.nrows
+
 import win32com.client
 
 o = win32com.client.Dispatch("Excel.Application")
@@ -47,7 +49,7 @@ Rho_Matrix_chart  = []
 Porosity_chart = []
 
 
-for i in range(0, sh.nrows, 1):
+for i in range(0, rows_chart_data 1):
     CNL_chart.append(sh.cell_value(rowx=i, colx=0))
     RHOB_chart.append(sh.cell_value(rowx=i, colx=1))
     Rho_Matrix_chart.append(sh.cell_value(rowx=i, colx=2))
@@ -68,22 +70,23 @@ book = xlrd.open_workbook("CNL_1pt1_testdata.xls")  #  log data
 sh = book.sheet_by_index(0)
 print(sh.name, sh.nrows, sh.ncols)
 
+rows_log_data = sh.nrows
+
 import win32com.client
 
 o = win32com.client.Dispatch("Excel.Application")
 # o.Visible = 1
 # o.Workbooks.Add() 
 
-rows_data = sh.nrows
 
 Dep = []
 RHOB = []
 CNL = []
 
 
-print(rows_data)
+print(rows_log_data)
 
-for i in range(0, rows_data, 1):
+for i in range(0, rows_log_data, 1):
     Dep.append(sh.cell_value(rowx=i, colx=0))
     CNL.append(sh.cell_value(rowx=i, colx=1))    
     RHOB.append(sh.cell_value(rowx=i, colx=2))
@@ -107,7 +110,7 @@ porarray   = []; #make list of 0 length
 
 
 #log Data
-for k in range(0,rows_data ,1):  
+for k in range(0,rows_log_data ,1):  
 
         cnl = (CNL[k]-(-0.05))/(0.6-(-0.05))
         rhob = (RHOB[k]-1.9)/(3-1.9)
@@ -131,7 +134,7 @@ for k in range(0,rows_data ,1):
 
 
         #this is the chartbook_reference_data being used 
-        for i in range(0,sh.nrows,1):
+        for i in range(0,rows_chart_data,1):
         
                 CNL_norm.append((CNL_chart[i] - (-0.05)) / (0.6 - (-0.05)))
                 RHOB_norm.append((RHOB_chart[i] - 1.9) / (3.0 - 1.9))
