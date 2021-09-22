@@ -1,11 +1,11 @@
 # Chart-Book-Neutron-Density-Porosity-using-KNN
-The objective of this project is to calculate a Neutron log vs. Bulk Density log Cross-Plot Total porosity using, at this point, the Schlumberger CNL or TNPH Charts as shown below. It is important to use the proper Neutron log associated with the appropriate chart for either fresh or saline fluid densities as specified. The Neutron logs should also be on limestone matrix with these charts. 
+The objective of this project is to calculate a Neutron vs. Bulk Density Cross-Plot Total porosity using, at this point, the Schlumberger CNL or TNPH Charts as shown below. It is important to use the proper Neutron log associated with the appropriate chart for either fresh or saline fluid densities as specified. The Neutron logs should also be on limestone matrix. 
 
 ![CNL_Image](CNL.png)
 
 ![TNPH_Image](TNPH.png)
 
-The name of the Python code is NeutDen_chartbook_porosity_knn_testresults.py. This program uses as training data a matrix of Neutron Porosity (V/V) vs. Bulk Density (G/CC) with known porosities (see below). In this example we are using test data as our log data to observe how well the program is actually working. We have very good agreement between our log analysis chart book training values and the values estimated from this program. 
+We are using a Jupyter Notebook to document this proces. This program uses as training data a matrix of Neutron Porosity (V/V) vs. Bulk Density (G/CC) with known porosities (see below). In this example we are using test data as our log data to observe how well the program is actually working. We have very good agreement between our log analysis chart book training values and the values estimated from this program. 
 
 The porosity estimations are made using KNN. Before we begin any distance calculations, we first normalize the Neutron porosity and Bulk Density curves and then use a KNN of 3 to estimate our Cross-Plot porosity values from our test data set.   
 
@@ -15,7 +15,7 @@ The porosity estimations are made using KNN. Before we begin any distance calcul
 
 This program has been tested for the charts available so far showing good agreement with the training data for our calculated porosities. Further testing is recommended before using this program to better understand the uncertainties in the estimations and validate using a KNN of 3. Please provide feedback if you have any issues.
 
-We are using CNL_1pt1_testdata.xls as log data for testing purposes, but you could use your own log data in lieu of this file to calculate Neutron-Density Total Cross-Plot porosities for your analysis.
+We are using CNL_1pt1_testdata.xlsx or TNPH_1pt19_testdata.xlsx as log data for QC purposes, but you could use your own log data in lieu of our file to calculate Neutron-Density Total Cross-Plot porosities for your own analysis, but be sure the df_log['xxx'] assignments agree with your data. 
 
 We have 4 sets of data files representing 4 of the Schlumberger charts; 2 fluid densities for CNL and 2 for TNPH. Other vendor charts will also be included as needed in the future. 
 
